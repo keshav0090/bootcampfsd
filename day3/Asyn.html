@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 4</title>
+</head>
+<body>  
+    <script>
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promise resolved!");
+        }, 2000);
+    });
+    async function asyncFunction() {
+        console.log("Waiting for the promise...");
+        const result = await promise;
+        console.log(result);
+    }
+    asyncFunction()
+    </script>
+</body>
+</html>
